@@ -1,0 +1,391 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(to bottom, #f0fdf4, #cbffdb);
+  color: #374151;
+  min-height: 100vh;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+nav h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #15803d;
+}
+nav .nav-buttons button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  color: #374151;
+}
+nav .nav-buttons .primary {
+  background: #16a34a;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+nav .nav-buttons .primary:hover {
+  background: #15803d;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.hero h2 {
+  color: #15803d;
+  font-size: 2.75rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.125rem;
+  color: #374151;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+.btn.green {
+  background: #16a34a;
+  color: white;
+}
+.btn.green:hover {
+  background: #15803d;
+}
+.btn.light {
+  background: #22c55e;
+  color: white;
+}
+.btn.light:hover {
+  background: #16a34a;
+}
+.hero img {
+  margin-top: 2rem;
+  width: 180px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Upload Section */
+.upload-section {
+  background: #fff;
+  text-align: center;
+  padding: 3rem 2rem;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.05);
+}
+.upload-section img {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(21, 128, 61, 0.2);
+}
+.card video {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.card .info {
+  padding: 1rem;
+  text-align: left;
+}
+.card h4 {
+  color: #15803d;
+  margin-bottom: 0.25rem;
+}
+
+/* How It Works */
+.how-it-works {
+  background: #fff;
+  padding: 3rem 2rem;
+}
+.how-it-works h3 {
+  color: #15803d;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+.step {
+  background: white;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+.step:hover {
+  transform: translateY(-4px);
+}
+.step img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 1rem;
+  transition: transform 0.3s;
+}
+.step img:hover {
+  transform: scale(1.1);
+}
+.step h4 {
+  color: #15803d;
+  margin-bottom: 0.5rem;
+}
+
+/* Rewards  */
+.rewards {
+  background:#eafff0;
+  text-align: center;
+  padding: 3rem 2rem;
+}
+.rewards h3 {
+  color: #000000;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.rewards p {
+  color: #374151;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+/* Footer */
+footer {
+  background: #15803d;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.modal.active {
+  display: flex;
+  animation: fadeOverlay 0.3s ease forwards;
+}
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  animation: fadeInUp 0.5s ease;
+}
+.modal-content h2 {
+  color: #15803d;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.modal-content input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
+.modal-content .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeInUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes fadeOverlay {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  nav h1 {
+    font-size: 1.25rem;
+  }
+  .nav-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .upload-section img {
+    width: 180px;
+    height: 180px;
+  }
+}
+/nav bar animation/
+/* The link itself */
+.home {
+  color: #000;
+  text-decoration: none;
+  display: inline-block; /* Important for positioning the pseudo-element */
+  position: relative;     /* Establishes a positioning context */
+  padding-bottom: 3px;    /* Adds a little space for the line */
+}
+
+/* The pseudo-element that will become the underline */
+.home::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px; /* Thickness of the underline */
+  background-color: #04ff00; /* Color of the underline */
+
+  /* Animation setup */
+  transform: scaleX(0); /* Starts at 0% width */
+  transform-origin: left; /* Animation grows from the left */
+  transition: transform 0.3s ease-out; /* Speed of the animation */
+}
+
+/* The hover state */
+.home:hover::after {
+  transform: scaleX(1); /* Animates to 100% width */
+}
+
+/* for about*/
+.About {
+  color: #000;
+  text-decoration: none;
+  display: inline-block; /* Important for positioning the pseudo-element */
+  position: relative;     /* Establishes a positioning context */
+  padding-bottom: 3px;    /* Adds a little space for the line */
+}
+
+/* The pseudo-element that will become the underline */
+.About::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px; /* Thickness of the underline */
+  background-color: #04ff00; /* Color of the underline */
+
+  /* Animation setup */
+  transform: scaleX(0); /* Starts at 0% width */
+  transform-origin: left; /* Animation grows from the left */
+  transition: transform 0.3s ease-out; /* Speed of the animation */
+}
+
+/* The hover state */
+.About:hover::after {
+  transform: scaleX(1); /* Animates to 100% width */
+}
+/* for rewards */
+.rewardss {
+  color: #000;
+  text-decoration: none;
+  display: inline-block; /* Important for positioning the pseudo-element */
+  position: relative;     /* Establishes a positioning context */
+  padding-bottom: 3px;    /* Adds a little space for the line */
+}
+
+/* The pseudo-element that will become the underline */
+.rewardss::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px; /* Thickness of the underline */
+  background-color: #04ff00; /* Color of the underline */
+
+  /* Animation setup */
+  transform: scaleX(0); /* Starts at 0% width */
+  transform-origin: left; /* Animation grows from the left */
+  transition: transform 0.3s ease-out; /* Speed of the animation */
+}
+
+/* The hover state */
+.rewardss:hover::after {
+  transform: scaleX(1); /* Animates to 100% width */
+}
