@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoSaver</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <h1>EcoSaver</h1>
+      <div class="nav-buttons">
+        <button class="home">Home</button>
+        <button class="About">About</button>
+        <button class="rewardss">Rewards</button>
+        <button class="primary" id="getStartedBtn">Get Started</button>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <h2>Scan. Learn. Recycle. Earn Rewards.</h2>
+      <p>
+        Scan any recyclable item and discover how to dispose, reuse, or recreate
+        it into something beautiful. Earn rewards and vouchers for your
+        eco-creations!
+      </p>
+      <div class="hero-buttons">
+        <label>
+          <input type="file" id="fileInput" accept="image/*" hidden />
+          <button class="btn green">📸 Scan Item</button>
+        </label>
+        <button class="btn light" id="openLogin">Get Started</button>
+      </div>
+     
+    </section>
+
+    <section class="upload-section" id="uploadSection" style="display: none">
+      <h3>Your Uploaded Item</h3>
+      <img id="uploadedImage" src="" alt="Uploaded Item" />
+      <div class="video-grid">
+        <div class="card">
+          <video controls>
+            <source
+              src=" "
+              type="video/mp4"
+            />
+          </video>
+          <div class="info">
+            <h4>Recycling Tip 1</h4>
+            <p>Learn how to reuse or recycle this item effectively.</p>
+          </div>
+        </div>
+        <div class="card">
+          <video controls>
+            <source
+              src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <div class="info">
+            <h4>Recycling Tip 2</h4>
+            <p>Learn how to reuse or recycle this item effectively.</p>
+          </div>
+        </div>
+        <div class="card">
+          <video controls>
+            <source
+              src=""
+              type="video/mp4"
+            />
+          </video>
+          <div class="info">
+            <h4>Recycling Tip 3</h4>
+            <p>Learn how to reuse or recycle this item effectively.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works">
+      <h3>How It Works</h3>
+      <div class="steps">
+        <div class="step">
+          <img src="camera.png" alt="Scan Item" />
+          <h4>Scan Item</h4>
+          <p>Scan any recyclable item to get details and recycling ideas.</p>
+        </div>
+        <div class="step">
+          <img src="file.png" alt="Watch & Learn" />
+          <h4>Watch & Learn</h4>
+          <p>Get personalized videos showing how to recycle or upcycle your item.</p>
+        </div>
+        <div class="step">
+          <img src="gift.png" alt="Upload & Earn" />
+          <h4>Upload & Earn</h4>
+          <p>Share your recycled creation and earn points or vouchers.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rewards">
+      <h3>Earn Exciting Rewards</h3>
+      <p>
+        Every eco-action counts! Upload your recycled creations and earn points,
+        vouchers, and exclusive rewards from our partner companies.
+      </p>
+      <button class="btn green">View Rewards</button>
+    </section>
+
+    <footer>
+      <p>© <span id="year"></span> EcoSaver. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+      <div class="modal-content">
+        <button class="close-btn" id="closeModal">✕</button>
+        <h2>Sign In to EcoSaver</h2>
+        <form id="loginForm">
+          <input type="email" placeholder="Email" required />
+          <input type="password" placeholder="Password" required />
+          <button type="submit" class="btn green" style="width: 100%">
+            Login
+          </button>
+        </form>
+        <p style="font-size: 0.9rem; color: #6b7280; margin-top: 0.5rem">
+          Don't have an account?
+          <span style="color: #15803d; cursor: pointer">Sign Up</span>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
