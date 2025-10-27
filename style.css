@@ -43,7 +43,7 @@ nav .nav-buttons .primary {
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 6px;
-  transition: background 0.3s;
+  transition:  0.3s;
 }
 nav .nav-buttons .primary:hover {
   background: #15803d;
@@ -300,7 +300,7 @@ footer {
     height: 180px;
   }
 }
-/nav bar animation/
+/*nav bar animation/
 /* The link itself */
 .home {
   color: #000;
